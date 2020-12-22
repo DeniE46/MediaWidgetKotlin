@@ -4,7 +4,7 @@
     android:minHeight="40dp"
     android:minWidth="200dp"
     android:resizeMode="horizontal"
-    android:previewImage="@drawable/example_appwidget_preview"
+    android:previewImage="@drawable/mediawidget_appicon"
     android:initialLayout="@layout/media_widget_layout"
     android:initialKeyguardLayout="@layout/media_widget_layout"
     android:widgetCategory="home_screen"

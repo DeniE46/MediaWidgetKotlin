@@ -11,7 +11,7 @@ import android.widget.RemoteViews
 import java.net.URI
 import java.util.*
 
-class MediaWidget : AppWidgetProvider() {
+class MediaWidgetProvider : AppWidgetProvider() {
 
     override fun onUpdate(
         context: Context?,
