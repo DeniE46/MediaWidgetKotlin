@@ -21,7 +21,7 @@ class MediaWidgetProvider : AppWidgetProvider() {
         appWidgetIds.forEach { appWidgetId ->
             val pendingIntent = Intent(context, MainActivity::class.java)
                 .let { intent ->
-                    PendingIntent.getActivity(context, 0, intent, 0)
+                    PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_IMMUTABLE)
                 }
 
             val view = RemoteViews(context?.packageName, R.layout.media_widget_layout)
@@ -36,7 +36,7 @@ class MediaWidgetProvider : AppWidgetProvider() {
     }
 
     private fun setMusicIntent(paramContext: Context?, paramRemoteViews: RemoteViews){
-        paramRemoteViews.setOnClickPendingIntent(R.id.music_icon, PendingIntent.getActivity(paramContext, 0, Intent("android.intent.action.MUSIC_PLAYER"), 0))
+        paramRemoteViews.setOnClickPendingIntent(R.id.music_icon, PendingIntent.getActivity(paramContext, 0, Intent("android.intent.action.MUSIC_PLAYER"), PendingIntent.FLAG_IMMUTABLE))
     }
 
     private fun setPhotoIntent(paramContext: Context?, paramRemoteViews: RemoteViews){
@@ -46,7 +46,7 @@ class MediaWidgetProvider : AppWidgetProvider() {
                     component = ComponentName("com.sonyericsson.album", "com.sonyericsson.album.MainActivity")
                     flags = Intent.FLAG_ACTIVITY_NEW_TASK //how 335544320 turned to this flag: https://stackoverflow.com/questions/52390129/android-intent-setflags-issue
                 }
-        paramRemoteViews.setOnClickPendingIntent(R.id.center_image, PendingIntent.getActivity(paramContext, 0, localIntent, 0))
+        paramRemoteViews.setOnClickPendingIntent(R.id.center_image, PendingIntent.getActivity(paramContext, 0, localIntent, PendingIntent.FLAG_IMMUTABLE))
     }
 
     private fun setVideoIntent(paramContext: Context?, paramRemoteViews: RemoteViews){
@@ -57,7 +57,7 @@ class MediaWidgetProvider : AppWidgetProvider() {
                     component = ComponentName("com.sonyericsson.album", "com.sonyericsson.album.MainActivity")
                     flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
                 }
-        paramRemoteViews.setOnClickPendingIntent(R.id.video_icon, PendingIntent.getActivity(paramContext, 0, localIntent, 0))
+        paramRemoteViews.setOnClickPendingIntent(R.id.video_icon, PendingIntent.getActivity(paramContext, 0, localIntent, PendingIntent.FLAG_IMMUTABLE))
     }
 
 }

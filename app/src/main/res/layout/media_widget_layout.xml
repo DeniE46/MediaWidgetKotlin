@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/widget_layout"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -19,7 +20,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:src="@drawable/music_button"
-            android:tint="@color/white"/>
+            android:tint="@android:color/system_accent1_300"/>
 
         <TextView
             style="@style/WidgetHorizontalSpacing"/>
@@ -29,7 +30,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:src="@drawable/photo_button"
-            android:tint="@color/white"/>
+            android:tint="@android:color/system_accent1_300"/>
 
         <TextView
             style="@style/WidgetHorizontalSpacing"/>
@@ -39,7 +40,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:src="@drawable/video_button"
-            android:tint="@color/white"/>
+            android:tint="@android:color/system_accent1_300"/>
 
     </LinearLayout>
 
